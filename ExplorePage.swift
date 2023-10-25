@@ -52,7 +52,7 @@ struct ExplorePage: View {
                             
                             HStack{
                                 
-                                Image(systemName: "fire")
+                                Image(systemName: "flame")
                                     .resizable()
                                     .frame(width: 15 , height: 15)
                                     .padding()
