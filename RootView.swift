@@ -9,39 +9,41 @@ import SwiftUI
 
 struct RootView: View {
   var body: some View {
-    TabView {
-      NavigationStack {
-        HomeView()
-      }
-      .tabItem {
-        Label("Home", systemImage: "house")
-      }
-      
-      NavigationStack {
-        Text("Dummy View")
-          .navigationTitle("1")
-          .tabItem {
-            Label("2", systemImage: "house")
+  //  make()
+      AuthView()
+  }
+    func make ()-> some View{
+        TabView {
+          NavigationStack {
+            HomeView()
+    //ProfilePage()
           }
-      }
-      .tabItem {
-        Label("Home", systemImage: "house")
-      }
-      
-      Text("Dummy View")
-        .tabItem {
-          Label("2", systemImage: "house")
-        }
-      Text("Dummy View")
-        .tabItem {
-          Label("2", systemImage: "house")
-        }
-      Text("Dummy View")
-        .tabItem {
-          Label("2", systemImage: "house")
+          .tabItem {
+            Label("Home", systemImage: "house")
+          }
+          
+          NavigationStack {
+            Text("Dummy View")
+              .navigationTitle("1")
+              .tabItem {
+                Label("2", systemImage: "house")
+              }
+          }
+          .tabItem {
+            Label("Navication", systemImage: "house")
+          }
+          
+          Text("Explore")
+            .tabItem {
+              Label("Explore", systemImage: "house")
+            }
+          Text("Profile")
+            .tabItem {
+              Label("Profile", systemImage: "person")
+            }
+        
         }
     }
-  }
 }
 
 struct RootView_Previews: PreviewProvider {

@@ -50,22 +50,22 @@ struct ProfilePage: View {
     var body: some View {
         ScrollView {
             VStack(alignment:.leading){
-             
+                
                 HStack {
                     Image("man")
                         .resizable()
                         .clipShape(Circle())
                         .frame(width: 70 , height: 70)
-                        .padding(.horizontal)
+                        .padding(.leading)
                     VStack{
                         Text("Steve Jobs")
                         // .foregroundColor(.white)
                             .font(.title3)
                             .bold()
+                            
                         Text("SteveJob")
-                           
                     }
-                    .padding()
+                    .padding(.trailing)
                 }//First HStack
                 HStack{
                     ForEach(row1){ detail in Label(
@@ -122,36 +122,36 @@ struct ProfilePage: View {
                         }
                     }
                 }
-               // .padding()
-                .background(.gray.opacity(0.75))
+                // .padding()
+                .background(.white.opacity(0.75))
                 .cornerRadius(10)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-               
+                
                 
                 //  }
                 
             }//First VStack
-          
-        }//>>EndScrol
-        HStack{
-            Image(systemName: "pin")
-                .resizable()
-                .frame(width: 20 ,height: 30)
+            
+            //  }//>>EndScrol
+            HStack{
+                Image(systemName: "pin")
+                    .resizable()
+                    .frame(width: 20 ,height: 30)
                 Text("Pinned")
-                .font(.title2)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        
-        .padding(.horizontal)
-
-        ScrollView (.horizontal ,showsIndicators:  false) {
+                    .font(.title2)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            
+            .padding(.horizontal)
+            
+            ScrollView (.horizontal ,showsIndicators:  false) {
                 HStack{
                     ZStack(alignment: .leading){
                         
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 8 * 46 ,height: 8 * 25)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.white.opacity(0.75))
                         VStack(alignment : .leading){
                             HStack{
                                 Image("AppleLogo")
@@ -181,34 +181,34 @@ struct ProfilePage: View {
                                     
                                 }
                             }
-                             
-                         
+                            
+                            
                         }
                     }
                     
                     ZStack{
-                     
+                        
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 8 * 46 ,height: 8 * 25)
-                            .foregroundColor(.gray)
-                       
-                            HStack{
-                                Image("Facebook")
-                                    .resizable()
-                                    .frame(width:  8 * 5 , height: 8 * 5)
-                                    .background(.white)
-                                    .cornerRadius(10)
-                                Text("facebook.com.")
-                              
+                            .foregroundColor(.white.opacity(0.75))
+                        
+                        HStack{
+                            Image("Facebook")
+                                .resizable()
+                                .frame(width:  8 * 5 , height: 8 * 5)
+                                .background(.white)
+                                .cornerRadius(10)
+                            Text("facebook.com.")
+                            
                         }
                     }
                     ZStack{
-                       
+                        
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 8 * 46 ,height: 8 * 25)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.white.opacity(0.75))
                         HStack{
-                        Image("Google")
+                            Image("Google")
                                 .resizable()
                                 .frame(width: 8 * 5 , height: 8 * 5)
                                 .background(.white)
@@ -218,11 +218,12 @@ struct ProfilePage: View {
                     }
                     
                 }
-              Spacer()
-            
+                Spacer()
+                
             }
-        //.frame(maxWidth: .infinity, alignment: .leading)
-    //  .background(.gray.opacity(0.25))
+        }
+     .frame(maxWidth: .infinity, alignment: .leading)
+     .background(.gray.opacity(0.25))
         }
         
     

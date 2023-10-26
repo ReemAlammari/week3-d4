@@ -21,7 +21,7 @@ struct ExplorePage: View {
                         .padding(.leading)
                         .font(.largeTitle)
                         .bold()
-                    HStack{
+                    HStack {
                         
                         Image(systemName: "magnifyingglass")
                             .resizable()
@@ -34,10 +34,10 @@ struct ExplorePage: View {
                         
                     }//::HStack
                     
-                    .background(.gray.opacity(0.4))
+                    .background(.white.opacity(0.75))
                     .cornerRadius(10)
-                    .foregroundColor(.white)
-                    .padding()
+                    .foregroundColor(.gray)
+                    .padding(.horizontal)
                     
                     VStack(alignment: .leading ) {
                         
@@ -46,7 +46,8 @@ struct ExplorePage: View {
                         Text("Discover")
                             .padding()
                             .foregroundColor(.white)
-                            .font(.title)
+                            .font(.title2)
+                            .bold()
                         
                         VStack{
                             
@@ -66,7 +67,7 @@ struct ExplorePage: View {
                                 
                             }//::HStack
                             
-                            Divider()
+                            Divider().background(.white)
                             HStack{
                                 Image(systemName: "face")
                                     .resizable()
@@ -80,44 +81,52 @@ struct ExplorePage: View {
                                 Text("Awesome Lists")
                                 Spacer()
                                 Image(systemName: "chevron.forward")
-                                
-                                
+                                  
                             }
                         }//::HStack
-                        
+                        .padding(.horizontal)
                         .background(.gray.opacity(0.2))
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                        .frame(width:370 , height: 400)
+                        .frame(width:380, height: 100 , alignment: .center)
+                        
                          
                     }//::ZStack
-                    
-                    Text("Activity")
-                    HStack {
-                        Image("man")
-                            .resizable()
-                            .clipShape(Circle())
-                            .frame(width: 30 , height: 30)
-                        
+                    .padding()
+                    VStack(alignment: .leading, spacing: 20){
+                        Text("Activity")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .bold()
+                            .padding(.horizontal)
+                        HStack {
+                            Image("man")
+                                .resizable()
+                                .clipShape(Circle())
+                                .frame(width: 30 , height: 30)
+                                .padding(.horizontal)
                             Text("apple/swift-syntax")
                                 .foregroundColor(.white)
                             
-                         }
-                    HStack{
-                        Image("AppleLogo")
-                            .resizable()
-                            .frame(width: 20 , height: 20)
-                            .background(.white)
-                            .cornerRadius(10)
-                        Text("apple/ swift-syntax")
-                      }
-                    
-                    Text("509.0.1")
-                        .font(.largeTitle)
-                        .bold()
-                 
+                        }
+                        HStack{
+                            Image("AppleLogo")
+                                .resizable()
+                                .frame(width: 30 , height: 30)
+                                .background(.white)
+                                .cornerRadius(8)
+                                .padding(.horizontal)
+                            Text("apple/ swift-syntax")
+                        }
+                        
+                        Text("509.0.1")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding()
+                    }
+                    .foregroundColor(.white)
                 }//::VStack
-                Spacer()
+               
                 }//::ScrolView
             }//::ZStack
     }
