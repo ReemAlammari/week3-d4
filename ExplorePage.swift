@@ -54,31 +54,34 @@ struct ExplorePage: View {
                             HStack{
                                 
                                 Image(systemName: "flame")
-                                    .resizable()
+                                    .font(.system(size: 30))
                                     .frame(width: 15 , height: 15)
                                     .padding()
                                     .background(.purple)
                                     .cornerRadius(10)
                                 
                                 Text("Trending Repositories")
-                                
+                                    .padding()
+                                    .font(.title3)
                                 Spacer()
                                 Image(systemName: "chevron.forward")
                                 
                             }//::HStack
                             
-                            Divider().background(.white)
+                            Divider()
+                            
                             HStack{
-                                Image(systemName: "face")
-                                    .resizable()
-                                    .frame(width: 15 , height: 15)
-                                    .padding(.all)
+                                Image(systemName: "face.smiling")
+                                    .font(.system(size: 30))
+                                    .frame(width: 12 , height: 12)
+                                    .padding()
                                     .background(.blue)
                                     .cornerRadius(10)
                                 
-                                
-                                
                                 Text("Awesome Lists")
+                                    .padding()
+                                    .font(.title3)
+                                
                                 Spacer()
                                 Image(systemName: "chevron.forward")
                                   
@@ -88,7 +91,8 @@ struct ExplorePage: View {
                         .background(.gray.opacity(0.2))
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                        .frame(width:380, height: 100 , alignment: .center)
+                        .frame(width:370, height: 100 , alignment: .center)
+                        .padding(.trailing)
                         
                          
                     }//::ZStack
@@ -96,9 +100,12 @@ struct ExplorePage: View {
                     VStack(alignment: .leading, spacing: 20){
                         Text("Activity")
                             .foregroundColor(.white)
+                            .padding(.top)
+                            .padding(.horizontal)
+                            .padding(.leading)
+                            .foregroundColor(.white)
                             .font(.title2)
                             .bold()
-                            .padding(.horizontal)
                         HStack {
                             Image("man")
                                 .resizable()
@@ -123,10 +130,60 @@ struct ExplorePage: View {
                             .font(.largeTitle)
                             .bold()
                             .padding()
+                        
                     }
                     .foregroundColor(.white)
+                    
+                    HStack{
+                        Image(systemName: "star")
+                        Text("12.600")
+                            .padding(.horizontal)
+                        Circle()
+                            .frame(width: 16, height: 16)
+                            .foregroundColor(.blue)
+                        Text("Type Script")
+                        
+                    }
+                    .foregroundColor(.white)
+                    .font(.title3)
+                    .padding(.horizontal)
+                    
+                    
+                    HStack{
+                        Image(systemName: "person")
+                        Text("26 contrbuters")
+                        Image(systemName: "chevron.forward")
+                        
+                    }
+                    .foregroundColor(.white)
+                    .font(.title3)
+                    .padding(.horizontal)
+                    
+                    
+                        Button(action: {}, label: {
+                            HStack{
+                                ZStack{
+                                    
+                                        Image(systemName: "star")
+                                           .bold()
+                                           .foregroundColor(.white)
+                                            .padding(.trailing)
+                                            .frame( width: 100, height: 100, alignment :.leading)
+                                        Text(" Star ")
+                                           .font(.title2)
+                                            .padding()
+                                            .frame(width: 380)
+                                            .background(Color.gray.opacity(0.4))
+                                            .cornerRadius(8*2)
+                                            .padding(.horizontal)
+                                            .padding(.trailing)
+                                }
+                                .foregroundColor(.white)
+                            }
+                            })
+                     
                 }//::VStack
-               
+                .padding(.leading)
                 }//::ScrolView
             }//::ZStack
     }

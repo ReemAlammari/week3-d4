@@ -1,36 +1,64 @@
-//
-//  RootView.swift
-//  GitHub Clone
-//
-//  Created by Abdullah Aljahdali on 24/10/2023.
-//
+
 
 import SwiftUI
 
 struct RootView: View {
+    var body: some View {
+        NavigationStack{
+            TabView{
+                
+                HomePage()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                ExplorePage()
+                    .tabItem {
+                        Label("Explore", systemImage: "globe")
+                    }
+                
+                InboxPage()
+                    .tabItem {
+                        Label("Inbox", systemImage: "shippingbox")
+                    }
+                ProfilePage()
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+                
+                AuthView()
+                    .tabItem {
+                        Label("Authitication", systemImage: "touchid")
+                    }
+                
+            }
+        }
+    }
+}
+
+
+/*struct RootView: View {
   var body: some View {
-  //  make()
-      AuthView()
+      make()
+      
   }
     func make ()-> some View{
         TabView {
           NavigationStack {
-            HomeView()
+              AuthView()
+          //  HomeView()
     //ProfilePage()
-          }
+          
           .tabItem {
             Label("Home", systemImage: "house")
-          }
+             }
           
-          NavigationStack {
-            Text("Dummy View")
-              .navigationTitle("1")
               .tabItem {
-                Label("2", systemImage: "house")
+                Label("InBox", systemImage: "box")
               }
-          }
+           Text("Authintication")
           .tabItem {
-            Label("Navication", systemImage: "house")
+            Label("Authintication", systemImage: "touchid")
           }
           
           Text("Explore")
@@ -44,7 +72,7 @@ struct RootView: View {
         
         }
     }
-}
+}*/
 
 struct RootView_Previews: PreviewProvider {
   static var previews: some View {

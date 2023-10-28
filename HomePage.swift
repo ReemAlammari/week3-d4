@@ -2,7 +2,10 @@
 
 import SwiftUI
 
-struct HomeView: View {
+
+
+struct HomePage: View {
+    
     let myWorkRows: Array<RowData> = [
         RowData(
             title: "Issues",
@@ -36,50 +39,54 @@ struct HomeView: View {
         ),
     ]
     var body: some View {
-        ScrollView {
-            HStack{
+       
+            ScrollView {
+                HStack{
+                    
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame( width: 20 , height: 20 , alignment: .leading)
+                        .padding(.horizontal)
+                    // .imageScale(.large)
+                    
+                    Text("Search GitHub")
+                        .frame( width: 300 , height: 40 , alignment: .leading)
+                    
+                }//::HStack
+                .background(.gray.opacity(0.2))
+                .cornerRadius(10)
+                .foregroundColor(.white)
                 
-                Image(systemName: "magnifyingglass")
-                    .resizable()
-                    .frame( width: 20 , height: 20 , alignment: .leading)
-                    .padding(.horizontal)
-                // .imageScale(.large)
-                
-                Text("Search GitHub")
-                    .frame( width: 300 , height: 40 , alignment: .leading)
-                
-            }//::HStack
-            .background(.gray.opacity(0.2))
-            .cornerRadius(10)
-            .foregroundColor(.white)
-            .padding()
-            
-            VStack {
-                HStack {
-                    Text("My Work")
-                    Spacer()
-                    Image(systemName: "ellipsis")
-                }
                 .padding()
                 
-                NavigationView{
-                    NavigationLink( destination: Text("Empty page")){
-                        VStack {
-                            ForEach(myWorkRows) { row in
-                                makeRow(row: row)
-                                if myWorkRows.last?.id != row.id {
-                                    Divider()
-                                        .padding(.leading)
+                VStack {
+                    HStack {
+                        Text("My Work")
+                        Spacer()
+                        Image(systemName: "ellipsis")
+                    }
+                    .padding()
+                    
+                    NavigationView{
+                        NavigationLink( destination: Text("Empty page")){
+                            VStack {
+                                ForEach(myWorkRows) { row in
+                                    makeRow(row: row)
+                                    if myWorkRows.last?.id != row.id {
+                                        Divider()
+                                            .padding(.leading)
+                                    }
                                 }
                             }
                         }
+                        .background(RoundedRectangle(cornerRadius: 22).fill(Color.white.opacity(0.75)))
+                        .padding(.vertical)
+                       
+                        .cornerRadius(8)
+                        .accentColor(.gray)
                     }
-                    .padding(.vertical)
-                    .background(.white.opacity(0.75))
-                    .cornerRadius(8)
+                    
                 }
-                                    
-            }
                 // .frame(maxWidth: .infinity,alignment: .leading)
                 
                 .padding(.horizontal)
@@ -259,34 +266,39 @@ struct HomeView: View {
             .background(.gray.opacity(0.25))
         }
     }
-        func makeRow(row: RowData) -> some View {
-            HStack {
-                Image(systemName: row.leadingImageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(row.leadingImageForegroundColor)
-                    .padding(8)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(row.leadingImageBackgroundColor)
-                    )
-                Text(row.title)
-                Spacer()
-                Image(systemName: "chevron.right")
-            }
-            // .frame(maxWidth: .infinity, alignment: .leading)
+    func makeRow(row: RowData) -> some View {
+        HStack {
+            Image(systemName: row.leadingImageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+                .foregroundColor(row.leadingImageForegroundColor)
+                .padding(8)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(row.leadingImageBackgroundColor)
+                )
+            Text(row.title)
+            Spacer()
+            Image(systemName: "chevron.right")
             
-            .padding(.horizontal)
-            
-        
         }
-   
+        // .frame(maxWidth: .infinity, alignment: .leading)
+        
+        .padding(.horizontal)
+        
+     //   .navigationTitle("Home")
+     
+        
+    
+    
+}
 
 
-struct HomeView_Previews: PreviewProvider {
+struct HomePage_Previews: PreviewProvider {
   static var previews: some View {
-    HomeView()
+    HomePage()
+      
   }
 }
 

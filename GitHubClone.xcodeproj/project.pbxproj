@@ -11,6 +11,9 @@
 		31284BF22AE9288000538106 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31284BF12AE9288000538106 /* ProfilePage.swift */; };
 		31284BF42AEA48B500538106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31284BF32AEA48B500538106 /* LaunchScreen.storyboard */; };
 		31284BF62AEA4A4700538106 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31284BF52AEA4A4700538106 /* AuthView.swift */; };
+		31284BF82AEA7E9C00538106 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31284BF72AEA7E9C00538106 /* LogInPage.swift */; };
+		31284BFC2AEBCE0200538106 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31284BFB2AEBCE0200538106 /* SignUpPage.swift */; };
+		316477E92AEC2F27001DB955 /* ValidateEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316477E82AEC2F27001DB955 /* ValidateEmail.swift */; };
 		31AFEB992AE7A7ED005FBC1A /* GitHubCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AFEB982AE7A7ED005FBC1A /* GitHubCloneApp.swift */; };
 		31AFEB9D2AE7A7EF005FBC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AFEB9C2AE7A7EF005FBC1A /* Assets.xcassets */; };
 		31AFEBA02AE7A7EF005FBC1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AFEB9F2AE7A7EF005FBC1A /* Preview Assets.xcassets */; };
@@ -24,6 +27,9 @@
 		31284BF12AE9288000538106 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		31284BF32AEA48B500538106 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31284BF52AEA4A4700538106 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		31284BF72AEA7E9C00538106 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
+		31284BFB2AEBCE0200538106 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		316477E82AEC2F27001DB955 /* ValidateEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateEmail.swift; sourceTree = "<group>"; };
 		31AFEB952AE7A7ED005FBC1A /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AFEB982AE7A7ED005FBC1A /* GitHubCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCloneApp.swift; sourceTree = "<group>"; };
 		31AFEB9C2AE7A7EF005FBC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,10 +50,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31AFEB8C2AE7A7ED005FBC1A = {
+		316477E72AEC2ECA001DB955 /* ExtentionToLogIn */ = {
+			isa = PBXGroup;
+			children = (
+				316477E82AEC2F27001DB955 /* ValidateEmail.swift */,
+			);
+			path = ExtentionToLogIn;
+			sourceTree = "<group>";
+		};
+		316477EC2AEC4950001DB955 /* AuthenticationPages */ = {
 			isa = PBXGroup;
 			children = (
 				31284BF52AEA4A4700538106 /* AuthView.swift */,
+				31284BF72AEA7E9C00538106 /* LogInPage.swift */,
+				31284BFB2AEBCE0200538106 /* SignUpPage.swift */,
+			);
+			path = AuthenticationPages;
+			sourceTree = "<group>";
+		};
+		31AFEB8C2AE7A7ED005FBC1A = {
+			isa = PBXGroup;
+			children = (
+				316477EC2AEC4950001DB955 /* AuthenticationPages */,
+				316477E72AEC2ECA001DB955 /* ExtentionToLogIn */,
 				31284BF32AEA48B500538106 /* LaunchScreen.storyboard */,
 				31284BF12AE9288000538106 /* ProfilePage.swift */,
 				31284BEF2AE927CF00538106 /* RootView.swift */,
@@ -156,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316477E92AEC2F27001DB955 /* ValidateEmail.swift in Sources */,
+				31284BF82AEA7E9C00538106 /* LogInPage.swift in Sources */,
 				31284BF62AEA4A4700538106 /* AuthView.swift in Sources */,
 				31284BF22AE9288000538106 /* ProfilePage.swift in Sources */,
+				31284BFC2AEBCE0200538106 /* SignUpPage.swift in Sources */,
 				31AFEBA72AE80BF5005FBC1A /* HomePage.swift in Sources */,
 				31AFEB992AE7A7ED005FBC1A /* GitHubCloneApp.swift in Sources */,
 				31AFEBAB2AE8DB85005FBC1A /* ExplorePage.swift in Sources */,

@@ -11,7 +11,7 @@ struct InboxPage: View {
     var body: some View {
         ZStack{
             Color.gray
-                 .opacity(0.99)
+                 .opacity(00.25)
                 .ignoresSafeArea(.all)
     //-------------------------------------------------------
             VStack(alignment: .leading) {
@@ -34,7 +34,7 @@ struct InboxPage: View {
                                 .bold()
                                 .frame(width: 100 )
                                 .foregroundColor(Color.white)
-                                .background(Color.white.opacity(0.6))
+                                .background(Color.gray.opacity(0.6))
                                 .cornerRadius(100)
                             
                             Spacer()
@@ -54,7 +54,7 @@ struct InboxPage: View {
                                 .bold()
                                 .frame(width: 100 , alignment: .center)
                                 .foregroundColor(Color.white)
-                                .background(Color.white.opacity(0.6))
+                                .background(Color.gray.opacity(0.6))
                                 .cornerRadius(100)
                         }
                         
@@ -65,7 +65,7 @@ struct InboxPage: View {
                                     .bold()
                                     .frame(width: 130 , alignment: .leading)
                                     .foregroundColor(Color.white)
-                                    .background(Color.white.opacity(0.6))
+                                    .background(Color.gray.opacity(0.6))
                                     .cornerRadius(100)
                                 Spacer()
                                 

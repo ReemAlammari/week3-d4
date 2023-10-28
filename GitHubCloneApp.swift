@@ -11,7 +11,12 @@ import SwiftUI
 struct GitHubCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+          // HomeView()
+           // AuthView()
+           // Todelete()
+           // ProfilePage()
+          //  LogInForTest()
+           RootView()
         }
     }
 }
